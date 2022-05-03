@@ -115,7 +115,7 @@ disaster = L.geoJson.ajax("assets/disaster.geojson",{
         pointToLayer: function(feature, latlng) {
                   return L.marker(latlng, {icon: L.divIcon({className: 'fa-solid fa-cloud-bolt marker-color-1' .toString() })});
               },
-              attribution: 'Basemap | Samaritans Purse data from SP TV | JTurner'
+              attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors | Samaritans Purse data from SP TV | JTurner'
 });
 disaster.addTo(mymap);
 //DISASTER DONE//
