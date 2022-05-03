@@ -89,7 +89,7 @@
   detectRetina: true // detect whether the sceen is high resolution or not.
   });
   // 2. Add a base map.
-  L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png').addTo(mymap);
+  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}').addTo(mymap);
 
 
 
@@ -115,7 +115,7 @@ disaster = L.geoJson.ajax("assets/disaster.geojson",{
         pointToLayer: function(feature, latlng) {
                   return L.marker(latlng, {icon: L.divIcon({className: 'fa-solid fa-cloud-bolt marker-color-1' .toString() })});
               },
-              attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors | Samaritans Purse data from SP TV | JTurner'
+              attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, USGS, FAO, NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, Esri China (Hong Kong), and the GIS User Community contributors | Samaritans Purse data from SP TV | JTurner'
 });
 disaster.addTo(mymap);
 //DISASTER DONE//
